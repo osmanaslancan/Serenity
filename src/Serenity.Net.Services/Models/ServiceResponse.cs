@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using Serenity.ComponentModel;
+using Serenity.Data.Mapping;
+using System.Collections.Generic;
 
 namespace Serenity.Services
 {
@@ -13,6 +15,7 @@ namespace Serenity.Services
         /// Another option could be to add a [JsonExtensionData] but that could open
         /// way to the side effect ignoring typos.
         /// </summary>
+        [NotMapped, Ignore]
         public Dictionary<string, object> CustomData { get; set; }
     }
 }
